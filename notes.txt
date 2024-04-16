@@ -1,0 +1,35 @@
+		instructions:
+		
+		1. initialize node - npm init -y
+		2. install jest - npm install --save-dev jest
+		3. update package.json:
+		        "scripts": {
+		            "test": "echo \"Error: no test specified\" && exit 1"
+		        },
+		    Change to "test": "jest"
+		4. create ABC.js file with function you will test and export
+		        include om bottom:
+		            module.exports = nameOfFunctionToBeExported;
+		5. create ABC.test.js file with test script you will run 
+		    and import tested file
+		        include const abc = require('./ABC.js)
+		6. run jest - npm test
+		
+		
+		Structure of a test script:
+		test description + test function(contains 'expect') + matcher
+		
+		
+		Matchers:
+		.toBe() = used for primative values (i.e. numbers, Strings, Booleans)
+		.toEqual() = used for objects or arrays
+		.toBeFalsy = used for values that are null, false, blank, NaN, undefined, 0 
+		.toBeTruthy() - used for truthy values
+		.toThrow() - verifies if the function throws an appropriate error when executed on an invalid input
+		
+		Testing Asynch Functions
+		
+		
+		Mocking and Spying
+		- mocking - isolates uinit of code being tested 
+		            -replace complex or slow version of a dependency with simpler versions, making it faster and more reliable to execute
